@@ -1,11 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputComponent from './components/InputComponent'
 import { Heading, Button} from '@chakra-ui/react';
 import '../styles/register.css';
+import { GoogleLogout, GoogleLogin } from 'react-google-login';
+import { gapi } from 'gapi-script'
 
 let user_type = 'vet';
 
 const Register = () => {
+
+    const cliente = "198690251047-sc69gvi8vqqt04c6oojqmj1kj5vght8m.apps.googleusercontent.com"
+    const [showloginButton, setShowloginButton] = useState(true);
+    
+    const loginHandleSuccess = (res) => {
+        console.log('Login Success:', res.profileObj);
+        alert('Se ha ingresado con Google')
+        setShowloginButton(false);
+
+    }
+    
+    const loginHandleFail = (res) => {
+        alert('Error inesperado')
+        console.log('Login failed:', res);
+        setShowloginButton(false);
+
+    }
+
+    useEffect(() => {
+        function start() {
+            gapi.client.init({
+                cliente: cliente,
+                scope: ""
+            })
+        };
+        gapi.load('client:auth2', start)
+    });
+    //var accessToken = gapi.auth.getToken().access_token;
 
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
@@ -98,6 +128,19 @@ const Register = () => {
                             Aceptar
                     </Button>
                     </form>
+
+                    <p className='questionCont2'>or</p>
+                    <div className='g-signin'>
+                        <GoogleLogin
+                            clientId={cliente}
+                            buttonText="Sign In with Google"
+                            onSuccess={loginHandleSuccess}
+                            onFailure = {loginHandleFail}
+                            cookiePolicy={'single_host_origin'}
+                            isSignedIn={true}
+                        />
+
+                    </div>
 
                     <p className='questionCont'>¿Ya tienes cuenta? <a href='./Login'> <b className='highlight'>Iniciar sesión</b></a></p>
                 </div>
