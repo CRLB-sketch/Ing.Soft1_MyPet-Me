@@ -132,3 +132,15 @@ h3{
   padding: 1%;
   float: right;
 }
+
+.displayMap-ext {
+  height: 80vmin;
+  width: 98vmax;
+  background-color: #B58ED5;
+  border-radius: 15px;
+  border-width: 10px;
+  border-color: white;
+  margin: 2vmin;
+  padding: 1%;
+  float: right;
+}

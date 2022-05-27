@@ -14,15 +14,14 @@
  * Javier Alvarez
  #######################################################################################*/
 
- import React from "react";
+import React from 'react'
 
- function VetView({onCurrentPage}) {
-     return (
-       <div>
-         <h1>Vetview</h1>
-       </div>
-     );
-   }
-   
- export default VetView;
-   
+function VetView({ onCurrentPage }) {
+    return (
+        <div>
+            <h1>Vetview</h1>
+        </div>
+    )
+}
+
+export default VetView
