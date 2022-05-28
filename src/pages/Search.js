@@ -249,6 +249,7 @@ function Search() {
                         <Button
                             color="white"
                             background={'orange'}
+                            
                             onClick={() => this.applyFilters()}
                         >
                             Aplicar filtros
