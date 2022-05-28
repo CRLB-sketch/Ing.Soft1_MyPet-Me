@@ -277,7 +277,7 @@ function Search() {
                     <div className="SearchInfoContainer">
                         <div className="titleContainer">
                             <Heading className="title">
-                                Busqueda de veterinarias
+                                Búsqueda de veterinarias
                             </Heading>
                         </div>
                     </div>
@@ -288,7 +288,7 @@ function Search() {
                             }
                             className="inputS"
                             focusBorderColor="rgb(174 213 142)"
-                            placeholder="Ingrese el nombre de una veterinaria"
+                            placeholder="Ingrese su búsqueda"
                         />
                         <Button
                             className="buttonS"
