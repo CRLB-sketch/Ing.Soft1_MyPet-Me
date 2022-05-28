@@ -46,3 +46,40 @@ img {
     font-weight: 400;
     max-width: 700px;
 }
+
+@media all and (max-width: 730px){
+    .text h2{
+        color: #97db75;
+        font-size: 2em; 
+        font-weight: 100;
+        line-height: 1em;
+        text-transform: uppercase; 
+    }
+
+    .text p{
+        font-size: 1.1em;
+        margin: 10px 0;
+        font-weight: 50;
+        max-width: 500px;
+    }
+
+}
+
+@media all and (max-width: 400px){
+    .text h2{
+        color: #97db75;
+        font-size: 1.55em; 
+        font-weight: 65;
+        line-height: 1em;
+        text-transform: uppercase; 
+       
+    }
+
+    .text p{
+        font-size: 0.75em;
+        margin: 5px 0;
+        font-weight: 35;
+        max-width: 250px;
+    }
+
+}
