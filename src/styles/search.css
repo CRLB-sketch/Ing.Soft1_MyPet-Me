@@ -175,6 +175,18 @@
     .SearchGridContainer Input{
         font-size: .9rem;
     }
+}
 
-
+@media (max-width: 520px) {
+    .CardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 380px) {
+    .CardsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .CardCont {
+        font-size: 0.9em;
+    }
 }
