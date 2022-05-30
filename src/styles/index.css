@@ -144,3 +144,66 @@ h3{
   padding: 1%;
   float: right;
 }
+
+@media (max-width: 870px){
+  .displayMap{
+    height: 80vmin;
+    width: 70vmax;
+  }
+
+  .displayMap-ext{
+    height: 80vmin;
+    width: 98vmax;
+  }
+  .displayInfo{
+    height: 80vmin;
+    width: 20vmax;
+  }
+}
+
+@media (max-width: 520px){
+  .displayMap{
+    height: 80vmin;
+    width: 70vmax;
+  }
+
+  .displayMap-ext{
+    height: 100vmax;
+    width: 75vmax;
+  }
+
+  .displayInfo{
+    height: 80vmax;
+    width: 20vmax;
+  }
+}
+
+@media (max-width: 390px){
+  .displayMap-ext{
+    height: 100vmax;
+    width: 98vmax;
+  }
+  .displayMap{
+    height: 80vmax;
+    width: 98vmax;
+  }
+  .displayInfo{
+    height: 15vmax;
+    width: 90vmax;
+  }
+}
+
+@media (max-width: 380px){
+  .displayMap-ext{
+    height: 100vmax;
+    width: 98vmax;
+  }
+  .displayMap{
+    height: 80vmax;
+    width: 98vmax;
+  }
+  .displayInfo{
+    height: 15vmax;
+    width: 90vmax;
+  }
+}
