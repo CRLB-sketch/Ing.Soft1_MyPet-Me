@@ -22,8 +22,10 @@ function Main() {
     return (
         <div>
             <HeaderComponent className="header" />
+            <div >
+
             <div className="textCont">
-                <img src="https://images.pexels.com/photos/247522/pexels-photo-247522.jpeg"></img>
+                
 
                 <div class="text">
                     <h2>
@@ -46,6 +48,10 @@ function Main() {
                     </p>
                 </div>
             </div>
+
+
+            </div>
+            
         </div>
     )
 }

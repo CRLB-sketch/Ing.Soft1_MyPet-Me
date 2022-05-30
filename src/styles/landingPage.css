@@ -1,3 +1,12 @@
+body{
+    background-image: url('https://images.pexels.com/photos/247522/pexels-photo-247522.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-color: #464646;
+    z-index: -1;
+}
 img {
     position: absolute;
     top: 0;
@@ -6,7 +15,7 @@ img {
     height: 100%;
     object-fit: cover;
 }
-
+ 
 .text{
     position: relative;
     z-index: 10;
@@ -20,7 +29,15 @@ img {
     padding: 150px;
     padding-top: 120px;
     padding-left: 180px;
+    padding-bottom: 100%;
     color: #fff;
+    background-image: url('https://images.pexels.com/photos/247522/pexels-photo-247522.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+    background-color: #464646;
+    z-index: -1;
 }
 
 .text h2 {
@@ -48,38 +65,65 @@ img {
 }
 
 @media all and (max-width: 730px){
-    .text h2{
-        color: #97db75;
-        font-size: 2em; 
-        font-weight: 100;
+    .text h2 {
+        font-size: 5em; 
+        font-weight: 800;
         line-height: 1em;
-        text-transform: uppercase; 
+        text-transform: uppercase;
+        color: #97db75;
+    }
+    
+    .text h2 {
+        font-size: 4em; 
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;   
     }
 
-    .text p{
-        font-size: 1.1em;
-        margin: 10px 0;
-        font-weight: 50;
-        max-width: 500px;
+    .text h3 {
+        font-size: 1.5em; 
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;   
     }
+    
+    
+    
+    .text p{
+        font-size: 1em;
+        margin: 20px 0;
+        font-weight: 400;
+        line-height: 1em;
+        max-width: 700px;
+    }
+
+    
 
 }
 
-@media all and (max-width: 400px){
-    .text h2{
-        color: #97db75;
-        font-size: 1.55em; 
-        font-weight: 65;
+@media all and (max-width: 500px){
+    .text h2 {
+        font-size: 5em; 
+        font-weight: 800;
         line-height: 1em;
-        text-transform: uppercase; 
-       
+        text-transform: uppercase;
+        color: #97db75;
     }
-
+    
+    .text h2 {
+        font-size: 4em; 
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;   
+    }
+    
+    
+    
     .text p{
-        font-size: 0.75em;
-        margin: 5px 0;
-        font-weight: 35;
-        max-width: 250px;
+        font-size: 1.1em;
+        margin: 20px 0;
+        font-weight: 400;
+        max-width: 700px;
     }
 
 }
