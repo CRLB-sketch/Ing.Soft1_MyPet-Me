@@ -97,7 +97,7 @@
 }
 
 .SearchGridContainer Input{
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .inputS{
@@ -160,7 +160,7 @@
 
 @media (max-width: 390px) {
     .SearchInfoContainer .title{ 
-        font-size: 1.3em;
+        font-size: 1.8em;
     }
 
     .SearchInfoContainer{
@@ -173,7 +173,7 @@
     }
 
     .SearchGridContainer Input{
-        font-size: .9rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -189,4 +189,10 @@
     .CardCont {
         font-size: 0.9em;
     }
+}
+
+
+.modalBtn{
+    width: 2rem;
+    background-color: black;
 }

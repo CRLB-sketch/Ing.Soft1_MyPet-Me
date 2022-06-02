@@ -18,6 +18,8 @@ import React, { useState, useEffect, Component, useMemo } from 'react'
 // import OptionComponent from './components/OptionComponent'
 import CardComponent from './components/CardComponent'
 import Popup from './Popup'
+import '../styles/search.css'
+
 
 import {
     Heading,
@@ -36,13 +38,24 @@ import {
     Box,
     SliderMark,
     RangeSliderMark,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,
+    ModalFooter
 } from '@chakra-ui/react'
 
-import '../styles/search.css'
+
+
+
 
 function Search() {
     const [posts, setPosts] = useState([])
     const [name, setName] = useState('')
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     const [selectedVet, setSelectedVet] = useState({})
     const [seePopup, setSeePopup] = useState(false)
@@ -50,6 +63,18 @@ function Search() {
     useEffect(() => {
         getDataName()
     }, [])
+
+    const styles = {
+        modalBtn: {
+            width: '110px',
+            height: '40px',
+            borderRadius: '10px',
+            padding: '3px',
+            display: 'flex',
+            alignItems: 'center',
+            fontSize: '17px'
+        }
+    }
 
     const getDataName = () => {
         fetch('http://127.0.0.1:8000/start_search', {
@@ -305,6 +330,27 @@ function Search() {
                             {' '}
                             &#x1F50D;{' '}
                         </Button>
+                    
+                        <Button style={styles.modalBtn} onClick={onOpen}>Filtros</Button>
+
+                        <Modal isOpen={isOpen} onClose={onClose}>
+                            <ModalOverlay />
+                            <ModalContent>
+                            <ModalHeader>Filtros</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody>
+                                holaaa
+                            </ModalBody>
+
+                            <ModalFooter>
+                                <Button colorScheme='blue' mr={3} onClick={onClose}>
+                                Close
+                                </Button>
+                                <Button variant='ghost'>Secondary Action</Button>
+                            </ModalFooter>
+                            </ModalContent>
+                        </Modal>
+
                     </div>
 
                     <div className="CardsContainer">
