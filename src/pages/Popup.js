@@ -74,9 +74,9 @@ function Popup({ vet, regretOriginal }) {
                                         <h4>Contactanos</h4>
                                         <span>correol@ejemplo.com</span>
                                         <br></br>
-                                        <SocialIcon url="https://twitter.com/uvggt" />
-                                        <SocialIcon url='https://www.facebook.com/universidaddelvallegt'/>
-                                        <SocialIcon url='https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin'/>
+                                        <SocialIcon url="https://twitter.com" />
+                                        <SocialIcon url='https://www.facebook.com/'/>
+                                        <SocialIcon url='https://arcadenoe.com.gt/'/>
                                         
                                     </div>
                                 </div>
