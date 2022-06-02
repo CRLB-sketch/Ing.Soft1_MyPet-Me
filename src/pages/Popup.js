@@ -19,6 +19,7 @@ import '../styles/popup.css'
 import { Avatar } from '@chakra-ui/react'
 import { Skeleton } from '@chakra-ui/react'
 import { Divider } from '@chakra-ui/react'
+import { SocialIcon } from 'react-social-icons';
 
 function Popup({ vet, regretOriginal }) {
     return (
@@ -72,6 +73,11 @@ function Popup({ vet, regretOriginal }) {
                                     <div class="cta-text">
                                         <h4>Contactanos</h4>
                                         <span>correol@ejemplo.com</span>
+                                        <br></br>
+                                        <SocialIcon url="https://twitter.com/uvggt" />
+                                        <SocialIcon url='https://www.facebook.com/universidaddelvallegt'/>
+                                        <SocialIcon url='https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin'/>
+                                        
                                     </div>
                                 </div>
                             </div>
