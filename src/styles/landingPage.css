@@ -129,9 +129,6 @@ img {
         max-width: 700px;
     }
 
-}
-
-@media (max-width: 390px) {
     .textCont{
         background-image: url('https://images.unsplash.com/photo-1577023311546-cdc07a8454d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
         padding-top: 260px;
@@ -147,5 +144,5 @@ img {
         height: 100vh;
     }
 
-
 }
+
