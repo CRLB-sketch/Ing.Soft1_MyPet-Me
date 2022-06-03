@@ -334,22 +334,14 @@ function Search() {
                         <Button style={styles.modalBtn} onClick={onOpen}>Filtros</Button>
 
                         <Modal isOpen={isOpen} onClose={onClose}>
-                            <ModalOverlay />
                             <ModalContent>
-                            <ModalHeader>Filtros</ModalHeader>
-                            <ModalCloseButton />
-                            <ModalBody>
-                                holaaa
-                            </ModalBody>
-
-                            <ModalFooter>
-                                <Button colorScheme='blue' mr={3} onClick={onClose}>
-                                Close
-                                </Button>
-                                <Button variant='ghost'>Secondary Action</Button>
-                            </ModalFooter>
+                                <ModalHeader>Filtros</ModalHeader>
+                                <ModalCloseButton />
+                                <ModalBody>
+                                    <FilterFrom/>
+                                </ModalBody>
                             </ModalContent>
-                        </Modal>
+                            </Modal>
 
                     </div>
 
