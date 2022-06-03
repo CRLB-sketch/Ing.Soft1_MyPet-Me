@@ -62,15 +62,21 @@ app.post('/apply_changues', (req, res) => {
         `
     }
     sql += `WHERE emergency = ${req.body.emergency}`
-    if (req.body.selected_service !== '') {
-        sql += `\nAND s.name = '${req.body.selected_service}'`
-    }
+    // Aplicar filtro de tipo de veterinarias
     if (req.body.vet_type !== 'Nada') {
         sql += `\nAND vet_type = '${req.body.vet_type}'`
     }
+    // Aplicar filtro para mostrar servicios en específico
+    if (req.body.selected_service !== '') {
+        sql += `\nAND s.name = '${req.body.selected_service}'`
+    }
+    // Aplicar filtro para mostrar horarios disponibles
+    if (req.body.time.length !== 0) {
+        sql += `\nAND '${req.body.time}' >= v.open_time AND '${req.body.time}' <= v.close_time`
+    }
+
     sql += `;`
     console.log('VET: ' + sql)
-
     db.query(sql, (err, row) => {
         res.json(row.rows)
     })
