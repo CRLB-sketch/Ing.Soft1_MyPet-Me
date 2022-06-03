@@ -68,7 +68,8 @@ function Search() {
             })
     }
 
-    const updateData = (the_emergency, the_vet, selected_service) => {
+    const updateData = (the_emergency, the_vet, selected_service, the_time) => {
+        // alert('PROBAR TIEMPO: [' + the_time + '] - ' + the_time.length)
         fetch('http://127.0.0.1:8000/apply_changues', {
             method: 'POST',
             headers: {
@@ -78,6 +79,7 @@ function Search() {
                 emergency: the_emergency,
                 vet_type: the_vet,
                 selected_service: selected_service,
+                time: the_time,
             }),
         })
             .then((response) => response.json())
@@ -94,6 +96,7 @@ function Search() {
                 emerg: true,
                 kind: 'Nada',
                 services: '',
+                the_time: '',
             }
             this.handleChange = this.handleChange.bind(this)
             this.applyFilters = this.applyFilters.bind(this)
@@ -104,7 +107,12 @@ function Search() {
         }
 
         applyFilters(event) {
-            updateData(this.state.emerg, this.state.kind, this.state.services)
+            updateData(
+                this.state.emerg,
+                this.state.kind,
+                this.state.services,
+                this.state.the_time
+            )
         }
 
         render() {
@@ -142,52 +150,14 @@ function Search() {
 
                         <div className="SearchOuterContainer2">
                             <FormControl>
-                                <label>Horarios</label>
-                                <RangeSlider
-                                    aria-label={['min', 'max']}
-                                    defaultValue={[0, 10]}
-                                    step={25}
-                                    onChangeEnd={(val) => console.log(val)}
-                                >
-                                    <RangeSliderMark
-                                        value={25}
-                                        mt="1"
-                                        ml="-2.5"
-                                        fontSize="smaller"
-                                    >
-                                        -Q.1k
-                                    </RangeSliderMark>
-                                    <RangeSliderMark
-                                        value={50}
-                                        mt="1"
-                                        ml="-2.5"
-                                        fontSize="smaller"
-                                    >
-                                        Q2.4k
-                                    </RangeSliderMark>
-                                    <RangeSliderMark
-                                        value={75}
-                                        mt="1"
-                                        ml="-2.5"
-                                        fontSize="smaller"
-                                    >
-                                        Q3.9k
-                                    </RangeSliderMark>
-                                    <RangeSliderMark
-                                        value={100}
-                                        mt="1"
-                                        ml="-2.5"
-                                        fontSize="smaller"
-                                    >
-                                        Q.4k+
-                                    </RangeSliderMark>
-                                    <RangeSliderTrack>
-                                        <Box position="relative" right={10} />
-                                        <RangeSliderFilledTrack bg="orange" />
-                                    </RangeSliderTrack>
-                                    <RangeSliderThumb index={0} />
-                                    <RangeSliderThumb index={1} />
-                                </RangeSlider>
+                                <label>Hora Disponibilidad</label>
+                                <br />
+                                <input
+                                    type="time"
+                                    name="the_time"
+                                    value={this.state.the_time}
+                                    onChange={this.handleChange}
+                                />
                             </FormControl>
                         </div>
 
@@ -249,7 +219,6 @@ function Search() {
                         <Button
                             color="white"
                             background={'orange'}
-                            
                             onClick={() => this.applyFilters()}
                         >
                             Aplicar filtros
