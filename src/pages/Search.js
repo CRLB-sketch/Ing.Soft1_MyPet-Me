@@ -20,7 +20,6 @@ import CardComponent from './components/CardComponent'
 import Popup from './Popup'
 import '../styles/search.css'
 
-
 import {
     Heading,
     Button,
@@ -45,23 +44,20 @@ import {
     ModalBody,
     ModalCloseButton,
     useDisclosure,
-    ModalFooter
+    ModalFooter,
 } from '@chakra-ui/react'
-
-
-
-
 
 function Search() {
     const [posts, setPosts] = useState([])
-    const [name, setName] = useState('')
-    const { isOpen, onOpen, onClose } = useDisclosure();
-
+    const { isOpen, onOpen, onClose } = useDisclosure()
     const [selectedVet, setSelectedVet] = useState({})
     const [seePopup, setSeePopup] = useState(false)
 
+    const [value, setValue] = useState('')
+    const handleChange = (event) => setValue(event.target.value)
+
     useEffect(() => {
-        getDataName()
+        getVets()
     }, [])
 
     const styles = {
@@ -72,18 +68,17 @@ function Search() {
             padding: '3px',
             display: 'flex',
             alignItems: 'center',
-            fontSize: '17px'
-        }
+            fontSize: '17px',
+        },
     }
 
-    const getDataName = () => {
+    const getVets = () => {
         fetch('http://127.0.0.1:8000/start_search', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: name,
                 emergency: true,
             }),
         })
@@ -112,6 +107,10 @@ function Search() {
                 console.log('VERIFICAR: ' + data)
                 setPosts(data)
             })
+    }
+
+    const searchVets = () => {
+        alert('BUSCAR: ' + value)
     }
 
     class FilterFrom extends React.Component {
@@ -277,10 +276,8 @@ function Search() {
                     </div>
                     <div className="SearchGridContainer">
                         <Input
-                            onChange={(event) =>
-                                setName(event.currentTarget.value)
-                            }
-                            className="inputS"
+                            value={value}
+                            onChange={handleChange}
                             focusBorderColor="rgb(174 213 142)"
                             placeholder="Ingrese su búsqueda"
                         />
@@ -294,28 +291,33 @@ function Search() {
                             }}
                             color="#fff"
                             grid-column="8"
-                            grid-row="1"
+                            onClick={searchVets}
                         >
                             {' '}
                             &#x1F50D;{' '}
                         </Button>
-                        
-                        <div className='modalBtnDiv'>
-                            <Button className="modalBtn" style={styles.modalBtn} onClick={onOpen}>Filtros</Button>
+
+                        <div className="modalBtnDiv">
+                            <Button
+                                className="modalBtn"
+                                style={styles.modalBtn}
+                                onClick={onOpen}
+                            >
+                                Filtros
+                            </Button>
                         </div>
 
                         <Modal isOpen={isOpen} onClose={onClose}>
                             <ModalContent>
-                                <div className='modalForm'>
-                                <ModalHeader>Filtros</ModalHeader>
-                                <ModalCloseButton />
-                                <ModalBody>
-                                    <FilterFrom />
-                                </ModalBody>
+                                <div className="modalForm">
+                                    <ModalHeader>Filtros</ModalHeader>
+                                    <ModalCloseButton />
+                                    <ModalBody>
+                                        <FilterFrom />
+                                    </ModalBody>
                                 </div>
                             </ModalContent>
-                            </Modal>
-
+                        </Modal>
                     </div>
 
                     <div className="CardsContainer">

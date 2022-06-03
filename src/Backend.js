@@ -41,9 +41,9 @@ app.post('/start_search', (req, res) => {
     //console.log("\nPELICULAS Y SERIES")
     const sql = `
         SELECT * FROM vet
-        WHERE name ILIKE '%${req.body.name}%'
-        AND emergency = ${req.body.emergency};
-        `
+        WHERE emergency = ${req.body.emergency};        
+    `
+    // AND emergency = ${req.body.emergency};
     //console.log(sql)
     db.query(sql, (err, row) => {
         res.json(row.rows)
@@ -79,18 +79,6 @@ app.post('/apply_changues', (req, res) => {
     console.log('VET: ' + sql)
     db.query(sql, (err, row) => {
         res.json(row.rows)
-    })
-})
-
-app.get('/testing', (req, res) => {
-    console.log('\nPROBANDO')
-
-    const sql = `
-        SELECT * FROM users;
-        `
-    console.log(sql)
-    db.query(sql, (err, row) => {
-        console.log(row.rows)
     })
 })
 
