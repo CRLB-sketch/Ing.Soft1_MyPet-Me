@@ -97,7 +97,7 @@
 }
 
 .SearchGridContainer Input{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .inputS{
@@ -154,6 +154,12 @@
 
 @media (max-width: 870px) {
     .SearchOuterContainer{
+        display: none;
+    }
+}
+
+@media (min-width: 870px) {
+    .modalBtnDiv, .modalForm{
         display: none;
     }
 }

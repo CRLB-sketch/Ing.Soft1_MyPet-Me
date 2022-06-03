@@ -330,16 +330,20 @@ function Search() {
                             {' '}
                             &#x1F50D;{' '}
                         </Button>
-                    
-                        <Button style={styles.modalBtn} onClick={onOpen}>Filtros</Button>
+                        
+                        <div className='modalBtnDiv'>
+                            <Button className="modalBtn" style={styles.modalBtn} onClick={onOpen}>Filtros</Button>
+                        </div>
 
                         <Modal isOpen={isOpen} onClose={onClose}>
                             <ModalContent>
+                                <div className='modalForm'>
                                 <ModalHeader>Filtros</ModalHeader>
                                 <ModalCloseButton />
                                 <ModalBody>
-                                    <FilterFrom/>
+                                    <FilterFrom />
                                 </ModalBody>
+                                </div>
                             </ModalContent>
                             </Modal>
 
