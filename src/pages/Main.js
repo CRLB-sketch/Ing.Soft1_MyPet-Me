@@ -39,7 +39,8 @@ function Main() {
                         </b>
                     </h3>
                     <p>
-                        <b>
+                        <b className="description">
+                        <br/>
                             Brindamos información acerca de veterinarias y los
                             doctores que atienden en ellas, para que puedas
                             llevar a tu mascota en caso de emergencia o atención
@@ -47,8 +48,9 @@ function Main() {
                         </b>
                     </p>
                 </div>
+                
             </div>
-
+            <div className='overlay'></div>
 
             </div>
             
