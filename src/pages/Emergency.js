@@ -59,48 +59,52 @@ const Emergency = () => {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                     ></meta>
-
-                    {selectedVet['name'] !== 'N/A' && (
-                        <div class="displayInfo">
-                            <h2>Emergencia</h2>
-                            <div class="vetInfo">
-                                <h4>Veterinaria: {selectedVet['name']}</h4>
-                                <h4>Dirección: {selectedVet['direction']}</h4>
-                                <h4>
-                                    Número de teléfono: {selectedVet['phone']}
-                                </h4>
+                    <div className="mapNpopDiv">
+                    
+                        <div className='mapNpopWrap'>
+                            
+                        {selectedVet['name'] !== 'N/A' && (
+                            <div class="displayInfo">
+                                <h2>Emergencia</h2>
+                                <div class="vetInfo">
+                                    <h4>Veterinaria: {selectedVet['name']}</h4>
+                                    <h4>Dirección: {selectedVet['direction']}</h4>
+                                    <h4>
+                                        Número de teléfono: {selectedVet['phone']}
+                                    </h4>
+                                </div>
+                                <button
+                                    class="emBtn"
+                                    onClick={() => setSeePopup(true)}
+                                >
+                                    Ver Más Detalles
+                                </button>
                             </div>
-                            <button
-                                class="emBtn"
-                                onClick={() => setSeePopup(true)}
+                        )}
+                            <div
+                                className={
+                                    selectedVet['name'] !== 'N/A'
+                                        ? 'displayMap'
+                                        : 'displayMap-ext'
+                                }
                             >
-                                Ver Más Detalles
-                            </button>
-                        </div>
-                    )}
-
-                    <div
-                        className={
-                            selectedVet['name'] !== 'N/A'
-                                ? 'displayMap'
-                                : 'displayMap-ext'
-                        }
-                    >
-                        <div
-                            className={
-                                selectedVet['name'] !== 'N/A'
-                                    ? 'map-container'
-                                    : 'map-container-ext'
-                            }
-                        >
-                            {!loaded && <h1>Cargando...</h1>}
-                            {loaded && (
-                                <MapComponent
-                                    vets={vets}
-                                    setSelectedVet={setSelectedVet}
-                                />
-                            )}
-                        </div>
+                                <div
+                                    className={
+                                        selectedVet['name'] !== 'N/A'
+                                            ? 'map-container'
+                                            : 'map-container-ext'
+                                    }
+                                >
+                                    {!loaded && <h1>Cargando...</h1>}
+                                    {loaded && (
+                                        <MapComponent
+                                            vets={vets}
+                                            setSelectedVet={setSelectedVet}
+                                        />
+                                    )}
+                                </div>
+                            </div>
+                            </div>
                     </div>
                 </>
             </>
