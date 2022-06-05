@@ -59,9 +59,21 @@ const Emergency = () => {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                     ></meta>
-                    <div className="mapNpopDiv">
+                    <div
+                         className={
+                            selectedVet['name'] !== 'N/A'
+                                ? 'mapNpopDiv'
+                                : 'mapNpopDiv2'
+                        }
+                    >
                     
-                        <div className='mapNpopWrap'>
+                        <div
+                             className={
+                                selectedVet['name'] !== 'N/A'
+                                    ? 'mapNpopWrap'
+                                    : 'mapNpopWrap2'
+                            }
+                        >
                             
                         {selectedVet['name'] !== 'N/A' && (
                             <div class="displayInfo">
