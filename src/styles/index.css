@@ -14,16 +14,16 @@ code {
   monospace;
 }
 
-.emBtn{
-  margin: 3.5rem;
+.emmBtn{
+  margin-top: 1.5rem;
   color: white;
   border-radius: 3px;
   text-transform: uppercase;
   background-color: #FF5959;
   padding: 5px;
-  font-size: 25px;
   font-weight: bold;
   text-decoration: none;  
+  align-self: center;
 }
 
 body { 
@@ -119,6 +119,22 @@ h3{
   margin: 2vmin;  
   padding: 1%;
   float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.displayInfo h2{
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.4em;
+}
+
+.displayInfo h4{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgba(223, 211, 200, 0.934);
+  margin-bottom: 0.4em;
 }
 
 .displayMap{

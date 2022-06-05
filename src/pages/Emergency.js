@@ -67,14 +67,14 @@ const Emergency = () => {
                             <div class="displayInfo">
                                 <h2>Emergencia</h2>
                                 <div class="vetInfo">
-                                    <h4>Veterinaria: {selectedVet['name']}</h4>
-                                    <h4>Dirección: {selectedVet['direction']}</h4>
+                                    <h4>Veterinaria: <p>{selectedVet['name']}</p></h4>
+                                    <h4>Dirección: <p>{selectedVet['direction']}</p></h4>
                                     <h4>
-                                        Número de teléfono: {selectedVet['phone']}
+                                        Número de teléfono: <p>{selectedVet['phone']}</p>
                                     </h4>
                                 </div>
                                 <button
-                                    class="emBtn"
+                                    class="emmBtn"
                                     onClick={() => setSeePopup(true)}
                                 >
                                     Ver Más Detalles
