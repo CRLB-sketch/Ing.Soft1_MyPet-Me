@@ -1,7 +1,7 @@
 :root {
   --fs-title: clamp(.9rem, 1vw + .8rem, 2rem);
-  --fs-info: clamp(.5rem, 1.1vw + .3rem, 1.5rem);
-  --fs-button: clamp(0.9rem, 0.8vw + .4rem, 1.4rem);
+  --fs-info: clamp(.75rem, 1.1vw + .3rem, 1.5rem);
+  --fs-button: clamp(0.4rem, 0.8vw + .4rem, 1.4rem);
 }
 
 body {
@@ -170,4 +170,10 @@ h3{
   /* margin: 2vmin; */
   padding: 1%;
   /* float: right; */
+}
+
+@media screen and (max-width: 785px) {
+  .displayMap{
+    width: 100%;
+  }
 }
