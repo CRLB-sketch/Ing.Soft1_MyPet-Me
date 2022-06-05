@@ -1,22 +1,108 @@
 .leaflet-container {
-    width: 100%;
-    height: 35vmax;
+  width: 100%;
+  height: 100%;
+  min-height: 50vh;
 }
-  
+
 .map-container {
-    height: 60vmin;
-    width: 66vmax;    
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .map-container-ext {
-    height: 60vmin;
-    width: 86vmax;    
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.displayMap {
+  height: 100%;
+  width: 100%;
+  /* width: 70vmax; */
+  background-color: #b58ed5;
+  border-radius: 15px;
+  border-width: 10px;
+  border-color: white;
+  margin: 2vmin;
+  padding: 1%;
+  float: right;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.displayMap-ext {
+  height: 100%;
+  width: 100%;
+  background-color: #b58ed5;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+  /* border-width: 10px;
+  border-color: white; */
+  /* margin: 2vmin; */
+  padding: 1%;
+  /* float: right; */
+}
+
+@media screen and (max-width: 785px) {
+  .displayMap {
+    width: 100%;
+  }
 }
 
 .btn-marker {
-    background-color: #ea9a64;
-    height: 30px;
-    width: 50px;
-    color: white;
-    font-size: 15spx;
+  background-color: #ea9a64;
+  height: 30px;
+  width: 50px;
+  color: white;
+  font-size: 15spx;
+}
+
+.mapNpopDiv {
+  width: 100vw;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1%;
+  /* background-color: blue; */
+}
+
+.mapNpopDiv2 {
+  width: 100vw;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1%;
+  /* background-color: blue; */
+}
+
+.mapNpopWrap {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  align-content: stretch;
+  justify-content: center;
+}
+
+.mapNpopWrap2 {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  align-content: stretch;
+  justify-content: center;
+}
+
+@media screen and (max-width: 785px) {
+  .mapNpopWrap {
+    flex-direction: column;
+    justify-content: unset;
+  }
+  .mapNpopDiv {
+    height: 70vh;
+    align-items: unset;
+  }
 }
