@@ -47,8 +47,10 @@
 @media screen and (max-width: 785px) {
     .mapNpopWrap{
       flex-direction: column;
+      justify-content: unset;
     }
     .mapNpopDiv{
         height: 70vh;
+        align-items: unset;
     }
   }
