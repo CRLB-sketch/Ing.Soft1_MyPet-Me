@@ -5,8 +5,10 @@
 }
   
 .map-container {
-    height: 60vmin;
-    width: 66vmax;    
+    height: 100%;
+    width: 100%;    
+    display: flex;
+    align-items: center;
 }
 
 .map-container-ext {
@@ -27,7 +29,8 @@
 .mapNpopDiv{
     width: 100vw;
     height: 88vh;
-    padding: 2.5%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
 }

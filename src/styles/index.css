@@ -122,7 +122,7 @@ h3{
 }
 
 .displayMap{
-  height: 80vmin;
+  /*height: 80vmin;*/
   width: 70vmax;
   background-color: #B58ED5;
   border-radius: 15px;
@@ -134,7 +134,7 @@ h3{
 }
 
 .displayMap-ext {
-  height: 80vmin;
+  /* height: 100%; */
   width: 100%;
   background-color: #B58ED5;
   border-radius: 10px;
@@ -147,12 +147,12 @@ h3{
 
 @media (max-width: 870px){
   .displayMap{
-    height: 80vmin;
+    /* height: 100%; */
     width: 70vmax;
   }
 
   .displayMap-ext{
-    height: 80vmin;
+    /* height: 100%; */
     width: 98vmax;
   }
   .displayInfo{
@@ -163,12 +163,12 @@ h3{
 
 @media (max-width: 520px){
   .displayMap{
-    height: 80vmin;
+    /* height: 100%; */
     width: 70vmax;
   }
 
   .displayMap-ext{
-    height: 100vmax;
+    /* height: 100%; */
     width: 75vmax;
   }
 
@@ -180,11 +180,11 @@ h3{
 
 @media (max-width: 390px){
   .displayMap-ext{
-    height: 100vmax;
+    /* height: 100%; */
     width: 98vmax;
   }
   .displayMap{
-    height: 80vmax;
+    /* height: 100%; */
     width: 98vmax;
   }
   .displayInfo{
@@ -195,11 +195,11 @@ h3{
 
 @media (max-width: 380px){
   .displayMap-ext{
-    height: 100vmax;
+    /* height: 100%; */
     width: 98vmax;
   }
   .displayMap{
-    height: 80vmax;
+    /* height: 100%; */
     width: 98vmax;
   }
   .displayInfo{
