@@ -1,3 +1,9 @@
+:root {
+  --fs-title: clamp(.9rem, 1vw + .8rem, 2rem);
+  --fs-info: clamp(.5rem, 1.1vw + .3rem, 1.5rem);
+  --fs-button: clamp(0.9rem, 0.8vw + .4rem, 1.4rem);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,7 +26,8 @@ code {
   border-radius: 3px;
   text-transform: uppercase;
   background-color: #FF5959;
-  padding: 5px;
+  padding: .8em;
+  font-size: var(--fs-button); 
   font-weight: bold;
   text-decoration: none;  
   align-self: center;
@@ -112,7 +119,8 @@ h3{
 .displayInfo{
   /* height: 100%; */
   width: 20vmax;
-  background-color: #ea9a64;
+  /* background-color: #ea9a64; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
   border-width: 10px;
   border-color: white;
@@ -124,18 +132,19 @@ h3{
 }
 
 .displayInfo h2{
-  font-size: 2em;
+  font-size: var(--fs-title);
   font-weight: bold;
-  color: white;
+  color: rgba(220, 176, 135, 0.934);
   margin-bottom: 0.4em;
 }
 
 .displayInfo h4{
-  font-size: 1.5em;
+  font-size: var(--fs-info);
   font-weight: bold;
   color: rgba(223, 211, 200, 0.934);
   margin-bottom: 0.4em;
 }
+
 
 .displayMap{
   height: 100%;
