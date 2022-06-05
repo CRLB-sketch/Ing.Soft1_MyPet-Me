@@ -262,6 +262,9 @@ function Search() {
               <Heading className="title">Búsqueda de veterinarias</Heading>
             </div>
           </div>
+
+          
+
           <div className="SearchGridContainer">
             {/* <Input
               value={value}
@@ -330,6 +333,7 @@ function Search() {
     <>
       {!seePopup && (
         <>
+        <div className='searchWrap'>
           <Input
             value={value}
             onChange={handleChange}
@@ -351,6 +355,7 @@ function Search() {
             {' '}
             &#x1F50D;{' '}
           </Button>
+        </div>
         </>
       )}
       {!seePopup && <SeeSearch />}
