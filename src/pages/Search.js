@@ -14,8 +14,7 @@
  * Javier Alvarez
  #######################################################################################*/
 
-import React, { useState, useEffect, Component, useMemo } from 'react'
-// import OptionComponent from './components/OptionComponent'
+import React, { useState, useEffect } from 'react'
 import CardComponent from './components/CardComponent'
 import Popup from './Popup'
 import '../styles/search.css'
@@ -26,25 +25,12 @@ import {
   Input,
   FormControl,
   Select,
-  Slider,
-  RangeSlider,
-  RangeSliderFilledTrack,
-  RangeSliderTrack,
-  RangeSliderThumb,
-  SliderTrack,
-  SliderFilledTrack,
-  SliderThumb,
-  Box,
-  SliderMark,
-  RangeSliderMark,
   Modal,
-  ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  ModalFooter,
 } from '@chakra-ui/react'
 
 function Search() {
@@ -263,30 +249,7 @@ function Search() {
             </div>
           </div>
 
-          
-
           <div className="SearchGridContainer">
-            {/* <Input
-              value={value}
-              onChange={handleChange}
-              focusBorderColor="rgb(174 213 142)"
-              placeholder="Ingrese su búsqueda"
-            /> */}
-            {/* <Button
-              className="buttonS"
-              backgroundColor="#ea9a64"
-              _hover="rgb(174 213 142)"
-              _active={{
-                bg: 'rgb(174 213 142)',
-                borderColor: 'rgb(174, 213, 142)',
-              }}
-              color="#fff"
-              grid-column="8"
-              onClick={searchVets}
-            >
-              {' '}
-              &#x1F50D;{' '}
-            </Button> */}
             <div className="modalBtnDiv">
               <Button
                 className="modalBtn"
@@ -333,29 +296,29 @@ function Search() {
     <>
       {!seePopup && (
         <>
-        <div className='searchWrap'>
-          <Input
-            value={value}
-            onChange={handleChange}
-            focusBorderColor="rgb(174 213 142)"
-            placeholder="Ingrese su búsqueda"
-          />
-          <Button
-            className="buttonS"
-            backgroundColor="#ea9a64"
-            _hover="rgb(174 213 142)"
-            _active={{
-              bg: 'rgb(174 213 142)',
-              borderColor: 'rgb(174, 213, 142)',
-            }}
-            color="#fff"
-            grid-column="8"
-            onClick={filterVet}
-          >
-            {' '}
-            &#x1F50D;{' '}
-          </Button>
-        </div>
+          <div className="searchWrap">
+            <Input
+              value={value}
+              onChange={handleChange}
+              focusBorderColor="rgb(174 213 142)"
+              placeholder="Ingrese su búsqueda"
+            />
+            <Button
+              className="buttonS"
+              backgroundColor="#ea9a64"
+              _hover="rgb(174 213 142)"
+              _active={{
+                bg: 'rgb(174 213 142)',
+                borderColor: 'rgb(174, 213, 142)',
+              }}
+              color="#fff"
+              grid-column="8"
+              onClick={filterVet}
+            >
+              {' '}
+              &#x1F50D;{' '}
+            </Button>
+          </div>
         </>
       )}
       {!seePopup && <SeeSearch />}
