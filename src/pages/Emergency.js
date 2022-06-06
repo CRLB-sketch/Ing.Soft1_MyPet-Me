@@ -45,7 +45,7 @@ const Emergency = () => {
     })()
   }, [])
 
-  const SeeMaps = ({}) => {
+  const SeeMaps = () => {
     return (
       <>
         <meta
