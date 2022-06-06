@@ -1,0 +1,208 @@
+:root{
+    --fondo: rgb(223 225 225);
+    --verde: rgb(174 213 142);
+    --white: rgb(181 142 213);
+    --naranja: #ea9a64;
+    --verde2: #97db75;
+    --verde3: #ace291;
+    --verde4: #b6e69e;
+    --gradient: linear-gradient(150deg, #97db75 0%, #b6e69e 100%);
+    --blanco: #fff;
+}
+
+.questionCont {
+    width: 100%;
+    height: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.container::-webkit-scrollbar {
+    width: .5em;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: var(--naranja);
+    border-radius: 100vw;
+}
+
+.container::-webkit-scrollbar-track {
+    margin-block: 1.4em;
+}
+
+.SearchBackgorund {
+    align-items: center;
+    background: var(--gradient);
+    display: flex;
+    height: 100vh;        
+    justify-content: left;
+    width: 100%;
+}
+
+.SearchOuterContainer {
+    background-color: var(--blanco);
+    border-radius: 30px;
+    height: 90%;
+    overflow-y: scroll;
+    padding: 30px;
+    margin-left: 1%;
+    width: 370px;
+    min-width: 220px;
+}
+.SearchInnerContainer {
+    padding: 10px;
+}
+
+.SearchInfoContainer {
+    /* height: auto;  
+    width: 100%;  */
+    width: min(90%, 70.5rem);
+    height: auto;
+}
+
+.SearchInfoContainer .title{ 
+    font-size: 2.25rem;
+}
+
+
+.titleContainer Heading{
+    background-color: red;
+}
+
+.SearchOuterContainer2 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.SearchOuterContainer3 {
+    background-color: var(--blanco);
+    border-radius: 30px;
+    height: 96%;
+    overflow-y: scroll;
+    padding: 30px;
+    margin-inline: 2%;
+    width: 100%;
+    /*background-color: blue;*/
+}
+
+
+.SearchGridContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);  
+    gap: 0.625rem;
+    width: 100%; /* */
+    padding: 1em;
+}
+
+.SearchGridContainer Input{
+    font-size: 1.2rem;
+}
+
+.inputS{
+    grid-column:1/12; 
+    grid-row:1;
+}
+
+.buttonS{
+    grid-column:12; 
+    grid-row:1;
+}
+
+.CardsContainer {
+    justify-content:center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+.CardCont {
+    display: flex;
+    position: relative;
+    justify-content:center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.imgS{
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    height: auto;
+}
+
+.aply-changes {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.aply-changes:hover {
+    background-color: var(--verde);
+}
+
+@media (max-width: 870px) {
+    .SearchOuterContainer{
+        display: none;
+    }
+}
+
+@media (min-width: 870px) {
+    .modalBtnDiv, .modalForm{
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .SearchInfoContainer .title{ 
+        font-size: 1.8em;
+    }
+
+    .SearchInfoContainer{
+        width: 100%;
+        justify-content:center;
+    }
+
+    .SearchInfoContainer .titleContainer{
+        margin-bottom: 0;
+    }
+
+    .SearchGridContainer Input{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .CardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 380px) {
+    .CardsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .CardCont {
+        font-size: 0.9em;
+    }
+}
+
+
+.modalBtn{
+    width: 2rem;
+    background-color: black;
+}
+
+.searchWrap{
+    display: flex;
+}
