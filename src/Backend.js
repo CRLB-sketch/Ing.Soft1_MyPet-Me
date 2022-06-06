@@ -80,6 +80,7 @@ app.post('/apply_changues', (req, res) => {
 })
 
 app.post('/name_filter', (req, res) => {
+  // Hoy sí digo yo jaja
   console.log('FILTRO')
   const sql = `
         SELECT * FROM vet v
