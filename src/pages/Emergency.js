@@ -86,6 +86,10 @@ const Emergency = () => {
                   <button class="emmBtn" onClick={() => setSeePopup(true)}>
                     Ver Más Detalles
                   </button>
+                  
+                  <a className='emmBtn2' href='https://www.waze.com/ul?ll=14.611732%2C-90.482656&navigate=yes&zoom=17'> Ir</a>
+                  
+                  
                 </div>
               )}
               <div
