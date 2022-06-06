@@ -1,3 +1,9 @@
+:root {
+  --fs-title: clamp(0.9rem, 1vw + 0.8rem, 2rem);
+  --fs-info: clamp(0.75rem, 1.1vw + 0.3rem, 1.5rem);
+  --fs-button: clamp(0.4rem, 0.8vw + 0.4rem, 1.4rem);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,40 +11,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #cfd4b6; 
+  background-color: #cfd4b6;
   overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+    monospace;
 }
 
-.emBtn{
-  margin: 3.5rem;
+.emmBtn {
+  margin-top: 1.5rem;
   color: white;
   border-radius: 3px;
   text-transform: uppercase;
-  background-color: #FF5959;
-  padding: 5px;
-  font-size: 25px;
+  background-color: #ff5959;
+  padding: 0.8em;
+  font-size: var(--fs-button);
   font-weight: bold;
-  text-decoration: none;  
+  text-decoration: none;
+  align-self: center;
 }
 
-body { 
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #dfe1e1;
 }
 
-h3{
+h3 {
   float: left;
 }
 
-.vetInfo{
-  height: 40vmin;
-  width: 15vmin;
+.vetInfo {
+  /* height: 40vmin; */
+  width: 100%;
   border: 5px;
   border-color: #dfe1e1;
 }
@@ -46,7 +53,7 @@ h3{
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color:#dfe1e1;
+  background-color: #dfe1e1;
   /* background-color:#B0D58E; */
   padding: 20px 10px;
 }
@@ -72,7 +79,7 @@ h3{
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: #B58ED5;
+  background-color: #b58ed5;
   /* background-color: #ea9a64; */
   color: black;
 }
@@ -82,7 +89,7 @@ h3{
 
 .header .active a {
   border-radius: 4px;
-  background-color: #FF5959;
+  background-color: #ff5959;
   color: white;
 }
 
@@ -109,101 +116,31 @@ h3{
   font-weight: 600;
 }
 
-.displayInfo{
-  height: 80vmin;
+.displayInfo {
+  /* height: 100%; */
   width: 20vmax;
-  background-color: #ea9a64;
+  /* background-color: #ea9a64; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
   border-width: 10px;
   border-color: white;
-  margin: 2vmin;  
+  margin: 2vmin;
   padding: 1%;
   float: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.displayMap{
-  height: 80vmin;
-  width: 70vmax;
-  background-color: #B58ED5;
-  border-radius: 15px;
-  border-width: 10px;
-  border-color: white;
-  margin: 2vmin;
-  padding: 1%;
-  float: right;
+.displayInfo h2 {
+  font-size: var(--fs-title);
+  font-weight: bold;
+  color: rgba(220, 176, 135, 0.934);
+  margin-bottom: 0.4em;
 }
 
-.displayMap-ext {
-  height: 80vmin;
-  width: 98vmax;
-  background-color: #B58ED5;
-  border-radius: 15px;
-  border-width: 10px;
-  border-color: white;
-  margin: 2vmin;
-  padding: 1%;
-  float: right;
-}
-
-@media (max-width: 870px){
-  .displayMap{
-    height: 80vmin;
-    width: 70vmax;
-  }
-
-  .displayMap-ext{
-    height: 80vmin;
-    width: 98vmax;
-  }
-  .displayInfo{
-    height: 80vmin;
-    width: 20vmax;
-  }
-}
-
-@media (max-width: 520px){
-  .displayMap{
-    height: 80vmin;
-    width: 70vmax;
-  }
-
-  .displayMap-ext{
-    height: 100vmax;
-    width: 75vmax;
-  }
-
-  .displayInfo{
-    height: 80vmax;
-    width: 20vmax;
-  }
-}
-
-@media (max-width: 390px){
-  .displayMap-ext{
-    height: 100vmax;
-    width: 98vmax;
-  }
-  .displayMap{
-    height: 80vmax;
-    width: 98vmax;
-  }
-  .displayInfo{
-    height: 15vmax;
-    width: 90vmax;
-  }
-}
-
-@media (max-width: 380px){
-  .displayMap-ext{
-    height: 100vmax;
-    width: 98vmax;
-  }
-  .displayMap{
-    height: 80vmax;
-    width: 98vmax;
-  }
-  .displayInfo{
-    height: 15vmax;
-    width: 90vmax;
-  }
+.displayInfo h4 {
+  font-size: var(--fs-info);
+  font-weight: bold;
+  color: rgba(223, 211, 200, 0.934);
+  margin-bottom: 0.4em;
 }
