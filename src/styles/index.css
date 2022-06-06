@@ -1,7 +1,7 @@
 :root {
-  --fs-title: clamp(0.9rem, 1vw + 0.8rem, 2rem);
-  --fs-info: clamp(0.75rem, 1.1vw + 0.3rem, 1.5rem);
-  --fs-button: clamp(0.4rem, 0.8vw + 0.4rem, 1.4rem);
+  --fs-title: clamp(0.9rem, 1vw + 0.8rem, 1.3rem);
+  --fs-info: clamp(0.75rem, 0.9vw + 0.3rem, 0.9rem);
+  --fs-button: clamp(0.4rem, 0.8vw + 0.4rem, 0.9rem);  
 }
 
 body {
@@ -31,6 +31,7 @@ code {
   font-weight: bold;
   text-decoration: none;
   align-self: center;
+  width: 100%;
 }
 
 body {
@@ -129,6 +130,7 @@ h3 {
   float: left;
   display: flex;
   flex-direction: column;
+  min-width: 195px;
 }
 
 .displayInfo h2 {
@@ -141,6 +143,6 @@ h3 {
 .displayInfo h4 {
   font-size: var(--fs-info);
   font-weight: bold;
-  color: rgba(223, 211, 200, 0.934);
+  color: rgb(219, 200, 183);
   margin-bottom: 0.4em;
 }
